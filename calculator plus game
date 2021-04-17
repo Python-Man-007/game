@@ -38,3 +38,6 @@ while True:
                 print(str(random.choice(list_num)))
             if init_gam == "N":
                 print(start)
+      if start == "Q":
+        print("quitting")
+        break
