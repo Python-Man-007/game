@@ -1,0 +1,40 @@
+from random import Random, choice
+import random
+list_num = [1, 6]
+
+while True:
+    print("Welcome to my game/calculator!")
+    print("Make sure to use capital letter".upper())
+    start = input(
+        "\nTo use calculator press 'C' or 'G' for the game and 'Q' for quit! ")
+
+    if start == "C":
+        init_cal = input(
+            "you have selected calculator, are you sure this is want you want(Y/N)?: ")
+        if init_cal == "Y":
+            print("okay then!")
+            print("\n")
+            num1 = int(input("Enter your first number: "))
+            operator = input("enter operator e.g +: ")
+            num2 = int(input("enter your second number: "))
+            if operator == "+":
+                print(num1 + num2)
+            if operator == "-":
+                print(num1 - num2)
+            if operator == "*":
+                print(num1 * num2)
+            if operator == "/":
+                print(num1 / num2)
+            elif init_cal == "N":
+                print(start)
+
+    if start == "G":
+        init_gam = input("are you want to play a game?(Y/N): ")
+        if init_gam == "Y":
+            print("cool")
+            print("\n")
+            roll_dice = input("To roll dice press 'R'")
+            if roll_dice == "R":
+                print(str(random.choice(list_num)))
+            if init_gam == "N":
+                print(start)
